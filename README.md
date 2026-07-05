@@ -1,6 +1,6 @@
- # GIS Portfolio - Frontend Assignment
+# GIS Portfolio - Frontend Assignment
 
- Project converted from a Figma design into semantic HTML and vanilla CSS. Responsive for desktop, tablet and mobile.
+Project converted from a Figma design into semantic HTML and vanilla CSS. Responsive for desktop, tablet and mobile.
 
  ## How to run
  - Open index.html in a browser (no server required).
