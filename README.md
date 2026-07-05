@@ -18,7 +18,3 @@
 
  ## Challenges
  - Exact typography and spacing from the Figma file may require additional asset exports. I used the provided image and created placeholder project cards.
-
- ## Next steps (optional)
- - Export optimized images and SVG icons from Figma and replace placeholders in `images/`.
- - Add a mobile navigation toggle if desired.
