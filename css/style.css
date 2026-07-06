@@ -229,13 +229,7 @@ body{
 
 .hero-image{
     width:100%;
-    max-width:var(--max-width);
-    margin-top:var(--space-lg);
-    padding:0 var(--space-sm);
-}
-.hero-image{
-    width:100%;
-    max-width:1000px;
+    max-width:1200px;
     margin-top:var(--space-lg);
     padding:0 var(--space-sm);
     display:block;
@@ -244,6 +238,10 @@ body{
 }
 
 .hero-image img{
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+    object-fit:cover;
     border-radius:18px;
     box-shadow:var(--shadow);
 }
@@ -413,11 +411,6 @@ section{
     font-weight:700;
 }
 
-.contact-bar{
-    background:#f1f6f9;
-    padding:22px 0;
-}
-
 .contact-flex{
     display:flex;
     gap:20px;
@@ -440,6 +433,129 @@ section{
     color:#fff;
     padding:26px 0;
     margin-top:16px;
+}
+
+/* Testimonials Section */
+
+.experience-highlight{
+    background:var(--bg);
+    padding:var(--space-xl) 0;
+}
+
+.experience-cards-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:28px;
+    margin-top:var(--space-lg);
+}
+
+.exp-card{
+    background:var(--surface);
+    padding:32px;
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 24px 48px rgba(16,24,40,0.14);
+}
+
+.exp-role{
+    font-size:0.9rem;
+    color:var(--color-primary);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+}
+
+.exp-card h3{
+    margin:0;
+    font-size:clamp(1.15rem, 1.5vw, 1.35rem);
+    color:var(--color-accent);
+    line-height:1.3;
+}
+
+.exp-date{
+    margin:0;
+    font-size:0.95rem;
+    color:var(--color-muted);
+    font-weight:700;
+}
+
+.exp-description{
+    margin:0;
+    font-size:clamp(0.95rem, 1vw, 1.05rem);
+    color:var(--color-muted);
+    line-height:1.6;
+    flex-grow:1;
+}
+
+/* CTA Section */
+
+.cta-section{
+    background:var(--surface);
+    border:2px solid var(--border);
+    padding:48px var(--space-md);
+    margin:var(--space-lg) auto;
+    max-width:1200px;
+    border-radius:16px;
+}
+
+.cta-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:32px;
+}
+
+.cta-inner h2{
+    font-size:clamp(1.8rem, 2.3vw, 2.2rem);
+    color:var(--color-accent);
+    margin:0;
+}
+
+.cta-buttons{
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.cta-btn{
+    padding:14px 32px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:1rem;
+    transition:all 0.25s ease;
+    border:2px solid transparent;
+}
+
+.primary-btn{
+    background:var(--color-accent);
+    color:#fff;
+}
+
+.primary-btn:hover{
+    background:#262626;
+    transform:translateY(-2px);
+}
+
+.secondary-btn{
+    background:#f0f0f0;
+    color:var(--color-accent);
+    border-color:#d9d9d9;
+}
+
+.secondary-btn:hover{
+    background:#e0e0e0;
+    transform:translateY(-2px);
 }
 
 .footer-inner{
@@ -492,6 +608,19 @@ section{
 
     .skills-grid{
         grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+
+    .experience-cards-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .cta-btn{
+        width:100%;
     }
 }
 
@@ -549,6 +678,10 @@ section{
         grid-template-columns:repeat(2,minmax(0,1fr));
     }
 
+    .experience-cards-grid{
+        grid-template-columns:1fr;
+    }
+
     .contact-flex{
         flex-direction:column;
         align-items:stretch;
@@ -561,5 +694,30 @@ section{
     .footer-inner{
         flex-direction:column;
         text-align:center;
+    }
+
+    .cta-section{
+        padding:32px 16px;
+        margin:var(--space-md) auto;
+    }
+
+    .cta-buttons{
+        width:100%;
+    }
+
+    .cta-btn{
+        width:100%;
+    }
+
+    .exp-card{
+        padding:24px;
+    }
+
+    .exp-role{
+        font-size:0.85rem;
+    }
+
+    .exp-card h3{
+        font-size:clamp(1rem, 1.2vw, 1.15rem);
     }
 }
